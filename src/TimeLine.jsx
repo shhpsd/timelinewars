@@ -263,14 +263,13 @@ const Timeline = () => {
             contentStyle={{ background: war.color, color: "#fff" }}
             contentArrowStyle={{ borderRight: `7px solid ${war.color}` }}
           >
-            <h3 style={{fontSize: "46px"}}>{war.name}</h3>
-            <p>{war.location}</p>
             <img
               src={war.image}
               alt={war.name}
-              style={{ width: "100%", height: "auto", borderRadius: "5px", marginTop: "20px" }}
+              style={{ width: "100%", height: "auto", borderRadius: "5px" }}
             />
-            <p>{war.description}</p>
+            <h3 style={{fontSize: "46px", margin: "0px"}}>{war.name}</h3>
+            <p>{war.location}</p>
             <div>
               {war.flags.map((flag, index) => (
                 <img
@@ -288,6 +287,8 @@ const Timeline = () => {
                 />
               ))}
             </div>
+            <p>{war.description}</p>
+
           </VerticalTimelineElement>
         ))}
       </VerticalTimeline>
